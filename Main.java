@@ -58,10 +58,16 @@ public class Main {
                     if (attackInput == 3)
                     {
 
-                        for(int lionHealth = 100; lionHealth >= characterHealth; lionHealth -=12 && int characterHealth = 60; characterHealth >= 1; characterHealth -= 3)
+                        while (lionHealth >= characterHealth)
                         {
+                            lionHealth -= 12;
+                            characterHealth -=3;
                             System.out.println("The lion the 12 damage the lion now has: " + lionHealth + "health.");
                             System.out.println("You took 3 damage, you now have: " + characterHealth + "health.");
+                            if (characterHealth <= 0)
+                            {
+                                System.out.println("Your character has been defeated!");
+                            }
                         }
                     }
                 }
